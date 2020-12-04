@@ -30,7 +30,7 @@ export class SlvComponent implements OnInit {
 
   montoTotalMaxInstrucciones: number;
 
-  
+
 
 
   msg = '';
@@ -328,6 +328,7 @@ export class SlvComponent implements OnInit {
       f_tc: ['', [Validators.required]]
     });
 
+    /*
     this.forma.controls.f_gatilloDeMonto.valueChanges.subscribe(data => {
       console.log('f_gatilloDeMonto => ' + data);
       if (this.forma.controls.f_gatilloDeMonto.value == '') {
@@ -336,7 +337,7 @@ export class SlvComponent implements OnInit {
         this.forma.controls.f_gatilloDeMonto.setValue(this.forma.controls.f_gatilloDeMonto.value.substr(1));
       }
     });
-
+*/
 
   }
 
