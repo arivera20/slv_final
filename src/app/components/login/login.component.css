@@ -197,3 +197,9 @@ input {
     width: 100px;
     margin-left: 143px;
 }
+
+.form-style {
+    position: relative;
+    display: block;
+    z-index: 1000;
+}
