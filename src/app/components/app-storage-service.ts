@@ -25,6 +25,9 @@ export class AppStorageService {
     console.log('Metodo logout()');
     localStorage.removeItem(TOKEN_KEY);
     localStorage.removeItem(USER_NAME);
+    localStorage.removeItem(TIMERTOKEN_KEY);
+    localStorage.removeItem(TIMERTICKET);
+    localStorage.removeItem(PERFIL);
   }
 
   // GUARDAR EL TOKEN

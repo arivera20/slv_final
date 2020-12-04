@@ -43,7 +43,9 @@ export class LoginComponent implements OnInit {
     private serviceLogin: LoginService,
     private appStorageService: AppStorageService,
     private spinnerService: NgxSpinnerService,
-    private appSettings: AppSettings) { }
+    private appSettings: AppSettings) { 
+      this.appStorageService.logout();
+    }
 
   ngOnInit(): void {
     this.getVersion();
