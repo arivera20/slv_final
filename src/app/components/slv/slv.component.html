@@ -103,7 +103,7 @@
                 </div>
                 <div class="control">
                     <mat-form-field class="small">
-                        <input matInput type="number" maxlength="2" formControlName="f_alb_h" min="0" max="23" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                        <input matInput type="number" onKeyDown="if(this.value.length>2) return 23;" formControlName="f_alb_h" min="0" max="23" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                     </mat-form-field>&nbsp;&nbsp;
                     <mat-form-field class="small">
                         <input matInput type="number" maxlength="2" formControlName="f_alb_m" min="0" max="59" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
