@@ -203,3 +203,7 @@ input {
     display: block;
     z-index: 1000;
 }
+
+.example-tooltip-red {
+    background: #b71c1c;
+}

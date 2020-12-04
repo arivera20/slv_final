@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
   hidePassModal = true;
   hidePass = true;
   captchaStatus = false;
+  public version = '';
 
   constructor(private loginService: LoginService,
     private router: Router,
@@ -45,6 +46,7 @@ export class LoginComponent implements OnInit {
     private appSettings: AppSettings) { }
 
   ngOnInit(): void {
+    this.getVersion();
     this.spinnerService.show();
     this.serviceLogin.cargaInicial().subscribe(
       response => {
@@ -68,6 +70,14 @@ export class LoginComponent implements OnInit {
     } else {
       this.captchaStatus = false;
     }
+  }
+
+  viewVersion() {
+    swal.fire({
+      icon: 'info',
+      title: 'La versión es:',
+      text: '123'
+    });
   }
 
   login() {
@@ -135,6 +145,28 @@ export class LoginComponent implements OnInit {
       headers.append('Content-Type', 'multipart/form-data');
       headers.append('Accept', 'application/json');
     }
+  }
+
+  // SERVICIO - getVersion
+  private getVersion(): void {
+    this.spinnerService.show();
+    this.serviceLogin.getVersion()
+      .subscribe(
+        data => {
+          this.version = data;
+          console.log(this.version);
+          this.spinnerService.hide();
+        }, error => {
+          this.spinnerService.hide();
+          toastr.error(error.error.msg, 'Error');
+          console.error('ERROR AL RECUPERAR VERSION - (LoginComponent)');
+          swal.fire({
+            icon: 'error',
+            title: 'No se pudo recuperar la versión del aplicativo',
+            text: this.msg
+          });
+          console.error(error.error.message);
+        });
   }
 
 

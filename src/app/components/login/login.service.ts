@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginResponse } from './login-class/loginResponse';
 import { LoginRequest } from './login-class/loginRequest';
 import { Observable } from 'rxjs';
@@ -37,6 +37,14 @@ export class LoginService {
     const urlCargaInicial = this.appSettings.path + 'slv-control-rest/api/login/isMostrarCaptchaSlv';
     console.log('prueba url: ' + urlCargaInicial);
     return this.http.get(urlCargaInicial, this.appSettings.httpOptionsJson);
+  }
+
+  public getVersion(): Observable<string> {
+    console.log('SERVICIO - preliquidador - getVersion');
+    console.log(this.appSettings.URL_preliquidador_getVersion);
+    const headers = new HttpHeaders().set('Content-Type', 'text/plain; charset=utf-8');
+    return this.http.get<string>
+      (this.appSettings.URL_preliquidador_getVersion, { headers, responseType: 'text' as 'json' });
   }
 
   /*
