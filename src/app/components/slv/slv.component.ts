@@ -179,12 +179,13 @@ export class SlvComponent implements OnInit {
 
   /** >>>>>>>> INICIANDO */
   ngOnInit(): void {
+    this.spinnerService.hide();
     this.forma.disable();
     this.editable = false;
     this.user = this.appStorageService.getUserName();
-    /*
+    
     this.refresh();
-    */
+    
     this.liquidacionFinDeDiaIcon = this.liquidacionFinDeDiaIconDisabled;
     this.aperturaPreLiqFinDiaIcon = this.aperturaPreLiqFinDiaIconDisabled;
     this.iniciarCicloIcon = this.iniciarCicloDisabled;
