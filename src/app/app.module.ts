@@ -46,6 +46,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     NgIdleKeepaliveModule.forRoot(),
     ModalModule.forRoot(),
   ],
+  exports: [ MatFormFieldModule, MatInputModule ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorError, multi: true }
