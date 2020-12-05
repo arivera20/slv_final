@@ -191,6 +191,7 @@ input {
     display: block;
     width: 260px;
     height: 40px;
+    color: red;
 }
 
 .btn-ingreso {

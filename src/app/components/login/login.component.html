@@ -23,19 +23,20 @@
 
                             <div class="row input-width">
                                 <!-- <input type="text" name="nombre" placeholder="Usuario" /> -->
-                                <input type="text" [class.input-error]="usuarioForm.invalid && usuarioForm.touched" id="idUsuario" name="usuario" placeholder="Usuario" required minlength="2" aria-label="Small" [(ngModel)]="us.usuario" #usuarioForm="ngModel">
+                                <input type="text" [class.input-error]="usuarioForm.invalid && usuarioForm.touched" id="idUsuario" name="usuario" placeholder="Usuario" required minlength="2" aria-label="Small" [(ngModel)]="us.usuario" #usuarioForm="ngModel" />
                                 <i class="fa fa-user errspan" style="font-size:19px;"></i>
                             </div>
 
                             <div class="div-error">
-                                <mat-error *ngIf="usuarioForm.hasError('required') && usuarioForm.touched">
+                                <div *ngIf="usuarioForm.hasError('required') && usuarioForm.touched">
                                     El campo es requerido.
-                                </mat-error>
+                                </div>
                             </div>
 
                             <div class="row input-width">
                                 <!--<input type="password" name="nombre" placeholder="Contraseña" />-->
-                                <input id="password" [class.input-error]="passwordForm.invalid && passwordForm.touched" name="password" placeholder="Contraseña" required minlength="2" aria-label="Small" [(ngModel)]="us.password" #passwordForm="ngModel" [type]="hidePass ? 'password' : 'text'">
+                                <input id="password" [class.input-error]="passwordForm.invalid && passwordForm.touched" name="password" placeholder="Contraseña" required minlength="2" aria-label="Small" [(ngModel)]="us.password" #passwordForm="ngModel" [type]="hidePass ? 'password' : 'text'"
+                                />
                                 <i class="fa fa-lock errspan" style="font-size:19px;"></i>
                                 <!--
                             <i class="fa fa-eye-slash errspann" style="font-size:19px;"></i>
@@ -43,9 +44,9 @@
                             </div>
 
                             <div class="div-error">
-                                <mat-error *ngIf="passwordForm.hasError('required') && passwordForm.touched">
+                                <div *ngIf="passwordForm.hasError('required') && passwordForm.touched">
                                     El campo es requerido.
-                                </mat-error>
+                                </div>
                             </div>
 
 

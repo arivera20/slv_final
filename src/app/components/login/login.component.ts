@@ -48,6 +48,7 @@ export class LoginComponent implements OnInit {
     }
 
   ngOnInit(): void {
+    
     this.getVersion();
     this.spinnerService.show();
     this.serviceLogin.cargaInicial().subscribe(
@@ -87,10 +88,10 @@ export class LoginComponent implements OnInit {
     this.us.sistema = this.appSettings.sistema;
     this.us.sistemaCaptcha = this.aux.requiereCaptcha;
     this.us.captchaStatus = this.captchaStatus;
-    /*
+/*
     this.appStorageService.setTimerToken('1');
     this.router.navigate(['/slv']);
-    */
+*/
     this.serviceLogin.getLogin(this.us).subscribe(
       response => {
         if (response.status) {

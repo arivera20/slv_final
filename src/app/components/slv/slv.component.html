@@ -13,7 +13,7 @@
                 </div>
                 <div class="control">
                     <mat-form-field>
-                        <input onblur="if(this.value==''){this.value='0';}" matInput formControlName="f_gatilloDeMonto" maxlength="10" onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46' />
+                        <input matInput type="text" formControlName="f_gatilloDeMonto" maxlength="10" onblur="if(this.value==''){this.value='0';}" onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46' />
                     </mat-form-field>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                 <div class="control espacio">
                     <mat-checkbox formControlName="f_limitarRetirosDeEfectivo" (change)="change()"></mat-checkbox>&nbsp;&nbsp;
                     <mat-form-field>
-                        <input matInput formControlName="f_lre_i" maxlength="10" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                        <input matInput type="text" formControlName="f_lre_i" maxlength="10" onblur="if(this.value==''){this.value='0';}" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
                     </mat-form-field>
                 </div>
             </div>
@@ -102,10 +102,12 @@
                 </div>
                 <div class="control">
                     <mat-form-field class="small">
-                        <input matInput type="number" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" formControlName="f_alb_h" min="0" max="23" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                        <input matInput type="number" onblur="if(this.value==''){this.value='0';}" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" formControlName="f_alb_h" min="0" max="23" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+                        />
                     </mat-form-field>&nbsp;&nbsp;
                     <mat-form-field class="small">
-                        <input matInput type="number" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" formControlName="f_alb_m" min="0" max="59" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                        <input matInput type="number" onblur="if(this.value==''){this.value='0';}" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" formControlName="f_alb_m" min="0" max="59" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+                        />
                     </mat-form-field>
                 </div>
             </div>
@@ -116,10 +118,10 @@
                 </div>
                 <div class="control">
                     <mat-form-field class="small">
-                        <input matInput type="number" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" formControlName="f_clb_h" min="0" max="23" />
+                        <input matInput type="number" onblur="if(this.value==''){this.value='0';}" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" formControlName="f_clb_h" min="0" max="23" />
                     </mat-form-field>&nbsp;&nbsp;
                     <mat-form-field class="small">
-                        <input matInput type="number" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" formControlName="f_clb_m" min="0" max="59" />
+                        <input matInput type="number" onblur="if(this.value==''){this.value='0';}" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" formControlName="f_clb_m" min="0" max="59" />
                     </mat-form-field>
                 </div>
             </div>
@@ -130,10 +132,10 @@
                 </div>
                 <div class="control">
                     <mat-form-field class="small">
-                        <input matInput type="number" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" formControlName="f_r_h" min="0" max="23" />
+                        <input matInput type="number" onblur="if(this.value==''){this.value='0';}" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" formControlName="f_r_h" min="0" max="23" />
                     </mat-form-field>&nbsp;&nbsp;
                     <mat-form-field class="small">
-                        <input matInput type="number" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" formControlName="f_r_m" min="0" max="59" />
+                        <input matInput type="number" onblur="if(this.value==''){this.value='0';}" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" formControlName="f_r_m" min="0" max="59" />
                     </mat-form-field>
                 </div>
             </div>
@@ -143,10 +145,10 @@
                 </div>
                 <div class="control">
                     <mat-form-field class="small">
-                        <input matInput type="number" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" formControlName="f_a_h" min="0" max="23" />
+                        <input matInput type="number" onblur="if(this.value==''){this.value='0';}" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" formControlName="f_a_h" min="0" max="23" />
                     </mat-form-field>&nbsp;&nbsp;
                     <mat-form-field class="small">
-                        <input matInput type="number" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" formControlName="f_a_h" min="0" max="59" />
+                        <input matInput type="number" onblur="if(this.value==''){this.value='0';}" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" formControlName="f_a_h" min="0" max="59" />
                     </mat-form-field>
                 </div>
             </div>
@@ -157,9 +159,10 @@
                 </div>
                 <div class="control">
                     <mat-form-field class="small">
+                        <input matInput type="number" onblur="if(this.value==''){this.value='0';}" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" formControlName="f_pc_h" min="0" max="23" />
                     </mat-form-field>&nbsp;&nbsp;
                     <mat-form-field class="small">
-                        <input matInput type="number" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" formControlName="f_pc_m" min="0" max="59" />
+                        <input matInput type="number" onblur="if(this.value==''){this.value='0';}" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" formControlName="f_pc_m" min="0" max="59" />
                     </mat-form-field>
                 </div>
             </div>
@@ -169,10 +172,10 @@
                 </div>
                 <div class="control">
                     <mat-form-field class="small">
-                        <input matInput type="number" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" formControlName="f_c_h" min="0" max="23" />
+                        <input matInput type="number" onblur="if(this.value==''){this.value='0';}" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" formControlName="f_c_h" min="0" max="23" />
                     </mat-form-field>&nbsp;&nbsp;
                     <mat-form-field class="small">
-                        <input matInput type="number" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" formControlName="f_c_m" min="0" max="59" />
+                        <input matInput type="number" onblur="if(this.value==''){this.value='0';}" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" formControlName="f_c_m" min="0" max="59" />
                     </mat-form-field>
                 </div>
             </div>
@@ -201,7 +204,7 @@
                 </div>
                 <div class="control">
                     <mat-form-field>
-                        <input matInput maxlength="17" formControlName="f_pmc" onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46' />
+                        <input matInput type="text" maxlength="17" formControlName="f_pmc" onblur="if(this.value==''){this.value='0';}" onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46' />
                     </mat-form-field>
                 </div>
             </div>
@@ -213,8 +216,7 @@
                 <div class="control">
                     <span class="label-min">1</span>
                     <span class="label-max">600</span>
-                    <mat-slider formControlName="f_tc" max="600" min="1" step="1" thumbLabel tickInterval="60">
-                    </mat-slider>
+                    <mat-slider formControlName="f_tc" max="600" min="1" step="1" thumbLabel tickInterval="60"></mat-slider>
                 </div>
             </div>
         </form>
